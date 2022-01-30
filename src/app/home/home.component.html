@@ -1,10 +1,10 @@
 <h1 *ngFor="let horse of horseList">
-  <p class="horseName">No. {{horse.id}} &nbsp; {{ horse.name }}</p>
-  <p [ngStyle]="{'color': trimWording(horse.livery)}">{{trimWording(horse.livery)}}</p>
+  <p class="horseName">No. {{horse.id}} &nbsp; {{ horse.name }} : {{getDistanceByHorse(horse.id)}}</p>
+  <p></p>
 </h1>
 
 
 <div class="buttons">
-  <button class="start" mat-button (click)="getHorses()">Start</button>
-  <button class="pause" mat-button color="primary">Pause</button>
+  <button class="start" mat-button (click)="start()">Start</button>
+  <button class="pause" mat-button color="primary" (click)="pause()">Pause</button>
 </div>

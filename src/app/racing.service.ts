@@ -24,9 +24,9 @@ export class RacingService {
     )
   }
   
-  getDistances(id: String, second: string): Observable<any>{
+  getDistances(id: number, second: number): Observable<any>{
     const params = new HttpParams().set('secondselapsed', second);
-    return this.httpClient.get(`${this.baseURL + '/' + id}`).pipe(
+    return this.httpClient.get(`${this.baseURL + '/' + id}`, { params }).pipe(
       map((res) => {
         return res;
       })
